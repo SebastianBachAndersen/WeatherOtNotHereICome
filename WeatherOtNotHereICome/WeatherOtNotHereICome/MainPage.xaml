@@ -89,37 +89,54 @@
                     Text="Se det daglige horoskop"
                     TextColor="#8D86C9"
                     HorizontalOptions="CenterAndExpand"
+                    Clicked="SetItemSource"
                     />
             <Frame BackgroundColor="#F61067"
-                    Margin="20"
-                    CornerRadius="15">
-                <CarouselView>
-                    <CarouselView.ItemTemplate>
+                   Margin="20"
+                   CornerRadius="15"
+                   VerticalOptions="StartAndExpand"
+                   HeightRequest="110">
+                <CollectionView x:Name="carouselView"
+                                VerticalOptions="StartAndExpand">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal"
+                                           ItemSpacing="35"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <ViewCell>
-                                <StackLayout>
-                                    <Label x:Name="overviewTimeLabel"
-                                            Text="10:00"/>
-                                    <StackLayout Orientation="Horizontal">
-                                        <Image Source="thermometer.png"/>
-                                        <Label x:Name="overviewTempLabel"
-                                                Text="69°" />
-                                    </StackLayout>
-                                    <StackLayout Orientation="Horizontal">
-                                        <Image Source="humidity.png"/>
-                                        <Label x:Name="overviewHumidityLabel"
-                                                Text="69%" />
-                                    </StackLayout>
-                                    <StackLayout Orientation="Horizontal">
-                                        <Image Source="sun.png"/>
-                                        <Label x:Name="overviewUvLabel"
-                                                Text="Ekstrem" />
-                                    </StackLayout>
+                            <StackLayout VerticalOptions="StartAndExpand"
+                                         HorizontalOptions="FillAndExpand">
+                                <Label x:Name="overviewTimeLabel"
+                                       Text="{Binding Time}"
+                                       HorizontalOptions="Center"/>
+                                <StackLayout Orientation="Horizontal"
+                                             HorizontalOptions="Center">
+                                    <Image Source="thermometer.png"
+                                           WidthRequest="20"
+                                           HeightRequest="20"/>
+                                    <Label x:Name="overviewTempLabel"
+                                            Text="{Binding Temp}" />
                                 </StackLayout>
-                            </ViewCell>
+                                <StackLayout Orientation="Horizontal"
+                                             HorizontalOptions="Center">
+                                    <Image Source="humidity.png"
+                                           WidthRequest="20"
+                                           HeightRequest="20"/>
+                                    <Label x:Name="overviewHumidityLabel"
+                                            Text="{Binding Humidity}" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal"
+                                             HorizontalOptions="Center">
+                                    <Image Source="sun.png"
+                                           WidthRequest="20"
+                                           HeightRequest="20"/>
+                                    <Label x:Name="overviewUvLabel"
+                                            Text="{Binding Uv}" />
+                                </StackLayout>
+                            </StackLayout>
                         </DataTemplate>
-                    </CarouselView.ItemTemplate>
-                </CarouselView>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
             </Frame>
         </StackLayout>
     </ScrollView>
