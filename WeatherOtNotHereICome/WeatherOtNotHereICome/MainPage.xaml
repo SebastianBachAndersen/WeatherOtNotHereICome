@@ -90,41 +90,37 @@
                     TextColor="#8D86C9"
                     HorizontalOptions="CenterAndExpand"
                     />
-            <ScrollView Orientation="Horizontal">
-                <StackLayout Orientation="Horizontal">
-                    <Frame BackgroundColor="#F61067"
-                           Margin="20"
-                           CornerRadius="15">
-                        <ListView>
-                            <ListView.ItemTemplate>
-                                <DataTemplate>
-                                    <ViewCell>
-                                        <StackLayout>
-                                            <Label x:Name="overviewTimeLabel"
-                                                   Text="10:00"/>
-                                            <StackLayout Orientation="Horizontal">
-                                                <Image Source="thermometer.png"/>
-                                                <Label x:Name="overviewTempLabel"
-                                                       Text="69°" />
-                                            </StackLayout>
-                                            <StackLayout Orientation="Horizontal">
-                                                <Image Source="humidity.png"/>
-                                                <Label x:Name="overviewHumidityLabel"
-                                                       Text="69%" />
-                                            </StackLayout>
-                                            <StackLayout Orientation="Horizontal">
-                                                <Image Source="sun.png"/>
-                                                <Label x:Name="overviewUvLabel"
-                                                       Text="Ekstrem" />
-                                            </StackLayout>
-                                        </StackLayout>
-                                    </ViewCell>
-                                </DataTemplate>
-                            </ListView.ItemTemplate>
-                        </ListView>
-                    </Frame>
-                </StackLayout>
-            </ScrollView>
+            <Frame BackgroundColor="#F61067"
+                    Margin="20"
+                    CornerRadius="15">
+                <CarouselView>
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <Label x:Name="overviewTimeLabel"
+                                            Text="10:00"/>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="thermometer.png"/>
+                                        <Label x:Name="overviewTempLabel"
+                                                Text="69°" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="humidity.png"/>
+                                        <Label x:Name="overviewHumidityLabel"
+                                                Text="69%" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="sun.png"/>
+                                        <Label x:Name="overviewUvLabel"
+                                                Text="Ekstrem" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+            </Frame>
         </StackLayout>
     </ScrollView>
 
