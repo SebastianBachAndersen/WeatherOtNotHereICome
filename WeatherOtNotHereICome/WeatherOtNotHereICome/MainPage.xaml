@@ -4,13 +4,128 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="WeatherOtNotHereICome.MainPage">
+             x:Class="WeatherOtNotHereICome.MainPage"
+             Title="Vejret"
+             BackgroundColor="#242038">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <ScrollView>
+        <StackLayout>
+            <Label x:Name="locationLabel"
+                   HorizontalOptions="Center"
+                   TextColor="#8D86C9"
+                   FontSize="Medium"
+                   Text="Viborg, Midtjylland"
+                   Padding="0,15,0,0" 
+                   Margin="0,0,0,-5" />
+            <Label x:Name="timeLabel"
+                   HorizontalOptions="Center"
+                   TextColor="#8D86C9"
+                   FontSize="Small"
+                   Text="Nu"
+                   Padding="0,0,0,10" />
+            <StackLayout>
+                <Image x:Name="bigWeatherImage"
+                       Source="testicon.png" 
+                       WidthRequest="60"
+                       HeightRequest="60" />
+                <Label x:Name="bigWeatherLabel"
+                       HorizontalOptions="Center"
+                       TextColor="#8D86C9"
+                       FontSize="90"
+                       Text="-69°"
+                       Margin="0,-20"/>
+                <Label x:Name="unitLabel"
+                       HorizontalOptions="Center"
+                       TextColor="#8D86C9"
+                       FontSize="Subtitle"
+                       Text="Celcius" />
+            </StackLayout>
+            <Frame BackgroundColor="#F61067"
+                   Margin="20"
+                   CornerRadius="15">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="1" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label HorizontalOptions="Center"
+                           TextColor="White"
+                           FontSize="Title"
+                           Text="Luftfugtighed"
+                           Grid.Row="0"
+                           Grid.Column="0"/>
+                    <Label x:Name="humidityLabel"
+                           HorizontalOptions="Center"
+                           TextColor="White"
+                           FontSize="Subtitle"
+                           Text="69%"
+                           Grid.Row="1"
+                           Grid.Column="0"/>
+                    <Frame BackgroundColor="White"
+                           Grid.Column="1"
+                           Grid.Row="0"
+                           Grid.RowSpan="2"/>
+                    <Label HorizontalOptions="Center"
+                           TextColor="White"
+                           FontSize="Title"
+                           Text="UV styrke"
+                           Grid.Row="0"
+                           Grid.Column="2"/>
+                    <Label x:Name="uvLabel"
+                           HorizontalOptions="Center"
+                           TextColor="White"
+                           FontSize="Subtitle"
+                           Text="Ekstrem"
+                           Grid.Row="1"
+                           Grid.Column="2"/>
+                </Grid>
+            </Frame>
+            <Button BackgroundColor="Transparent"
+                    Text="Se det daglige horoskop"
+                    TextColor="#8D86C9"
+                    HorizontalOptions="CenterAndExpand"
+                    />
+            <ScrollView Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal">
+                    <Frame BackgroundColor="#F61067"
+                           Margin="20"
+                           CornerRadius="15">
+                        <ListView>
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout>
+                                            <Label x:Name="overviewTimeLabel"
+                                                   Text="10:00"/>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Image Source="thermometer.png"/>
+                                                <Label x:Name="overviewTempLabel"
+                                                       Text="69°" />
+                                            </StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Image Source="humidity.png"/>
+                                                <Label x:Name="overviewHumidityLabel"
+                                                       Text="69%" />
+                                            </StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Image Source="sun.png"/>
+                                                <Label x:Name="overviewUvLabel"
+                                                       Text="Ekstrem" />
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ScrollView>
 
 </ContentPage>

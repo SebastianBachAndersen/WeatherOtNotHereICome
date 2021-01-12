@@ -10,7 +10,11 @@ namespace WeatherOtNotHereICome
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage()) 
+            {
+                BarBackgroundColor = Color.FromHex("#F61067"),
+                BarTextColor = Color.White
+            };
         }
 
         protected override void OnStart()
