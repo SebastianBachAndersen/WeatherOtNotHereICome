@@ -25,7 +25,7 @@
                    Padding="0,0,0,10" />
             <StackLayout>
                 <Image x:Name="bigWeatherImage"
-                       Source="testicon.png" 
+                       Source="purple_tornado.png" 
                        WidthRequest="60"
                        HeightRequest="60" />
                 <Label x:Name="bigWeatherLabel"
@@ -104,36 +104,66 @@
                     </CollectionView.ItemsLayout>
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <StackLayout VerticalOptions="StartAndExpand"
-                                         HorizontalOptions="FillAndExpand">
+                            <Grid VerticalOptions="StartAndExpand"
+                                  HorizontalOptions="FillAndExpand">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
                                 <Label x:Name="overviewTimeLabel"
                                        Text="{Binding Time}"
-                                       HorizontalOptions="Center"/>
-                                <StackLayout Orientation="Horizontal"
-                                             HorizontalOptions="Center">
-                                    <Image Source="thermometer.png"
-                                           WidthRequest="20"
-                                           HeightRequest="20"/>
-                                    <Label x:Name="overviewTempLabel"
-                                            Text="{Binding Temp}" />
-                                </StackLayout>
-                                <StackLayout Orientation="Horizontal"
-                                             HorizontalOptions="Center">
-                                    <Image Source="humidity.png"
-                                           WidthRequest="20"
-                                           HeightRequest="20"/>
-                                    <Label x:Name="overviewHumidityLabel"
-                                            Text="{Binding Humidity}" />
-                                </StackLayout>
-                                <StackLayout Orientation="Horizontal"
-                                             HorizontalOptions="Center">
-                                    <Image Source="sun.png"
-                                           WidthRequest="20"
-                                           HeightRequest="20"/>
-                                    <Label x:Name="overviewUvLabel"
-                                            Text="{Binding Uv}" />
-                                </StackLayout>
-                            </StackLayout>
+                                       HorizontalOptions="Center"
+                                       TextColor="White"
+                                       FontSize="16"
+                                       Grid.Row="0"
+                                       Grid.ColumnSpan="2"/>
+                                
+                                <Image Source="hot.png"
+                                       HorizontalOptions="Center"
+                                       WidthRequest="20"
+                                       HeightRequest="20"
+                                       Grid.Column="0"
+                                       Grid.Row="1"/>
+                                <Label x:Name="overviewTempLabel"
+                                       Text="{Binding Temp}"
+                                       HorizontalOptions="Center"
+                                       TextColor="White"
+                                       Grid.Column="1"
+                                       Grid.Row="1"/>
+                                
+                                <Image Source="humidity.png"
+                                       HorizontalOptions="Center"
+                                       WidthRequest="20"
+                                       HeightRequest="20"
+                                       Grid.Column="0"
+                                       Grid.Row="2"/>
+                                <Label x:Name="overviewHumidityLabel"
+                                       Text="{Binding Humidity}"
+                                       HorizontalOptions="Center"
+                                       TextColor="White"
+                                       Grid.Column="1"
+                                       Grid.Row="2"/>
+                                
+                                <Image Source="sun.png"
+                                       HorizontalOptions="Center"
+                                       WidthRequest="20"
+                                       HeightRequest="20"
+                                       Grid.Column="0"
+                                       Grid.Row="3"/>
+                                <Label x:Name="overviewUvLabel"
+                                       Text="{Binding Uv}"
+                                       HorizontalOptions="Center"
+                                       TextColor="White"
+                                       FontSize="Small"
+                                       Grid.Column="1"
+                                       Grid.Row="3" />
+                            </Grid>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>

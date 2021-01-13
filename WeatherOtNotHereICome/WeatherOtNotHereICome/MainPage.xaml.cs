@@ -23,7 +23,7 @@ namespace WeatherOtNotHereICome
             List<DummyClass> yeet = new List<DummyClass>();
             for (int i = 0; i < 10; i++)
             {
-                yeet.Add(new DummyClass("10:00", "oi", "yeed", "AAAAAA"));
+                yeet.Add(new DummyClass("13:37", "1°", "0%", "Ekstrem"));
             }
             carouselView.ItemsSource = yeet;
         }
