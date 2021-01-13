@@ -4,16 +4,177 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="WeatherOtNotHereICome.MainPage">
+             x:Class="WeatherOtNotHereICome.MainPage"
+             Title="Vejret"
+             BackgroundColor="#242038">
 
-    <StackLayout>
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
-            <Image Margin="0,50,0,0" x:Name="imgBanner" Source="banner.png" ></Image>
-            <Image Margin="0,0,0,10" x:Name="imgXamarinEssential" Source="xamarinessential.png" ></Image>
-            <Label Margin="0,0,0,10" Text="Geolocation" FontAttributes="Bold" FontSize="Large" TextColor="#CA6F1E" HorizontalTextAlignment="Center" ></Label>
-            <Label HorizontalTextAlignment="Center" x:Name="lblLatitude"></Label>
-            <Label HorizontalTextAlignment="Center" x:Name="lblLongitude"></Label>
+    <ScrollView>
+        <StackLayout>
+            <Label x:Name="locationLabel"
+                   HorizontalOptions="Center"
+                   TextColor="#8D86C9"
+                   FontSize="Medium"
+                   Text="Viborg, Midtjylland"
+                   Padding="0,15,0,0" 
+                   Margin="0,0,0,-5" />
+            <Label x:Name="timeLabel"
+                   HorizontalOptions="Center"
+                   TextColor="#8D86C9"
+                   FontSize="Small"
+                   Text="Nu"
+                   Padding="0,0,0,10" />
+            <StackLayout>
+                <Image x:Name="bigWeatherImage"
+                       Source="purple_tornado.png" 
+                       WidthRequest="60"
+                       HeightRequest="60" />
+                <Label x:Name="bigWeatherLabel"
+                       HorizontalOptions="Center"
+                       TextColor="#8D86C9"
+                       FontSize="90"
+                       Text="-69°"
+                       Margin="0,-20"/>
+                <Label x:Name="unitLabel"
+                       HorizontalOptions="Center"
+                       TextColor="#8D86C9"
+                       FontSize="Subtitle"
+                       Text="Celcius" />
+            </StackLayout>
+            <Frame BackgroundColor="#F61067"
+                   Margin="20"
+                   CornerRadius="15">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="1" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label HorizontalOptions="Center"
+                           TextColor="White"
+                           FontSize="Title"
+                           Text="Luftfugtighed"
+                           Grid.Row="0"
+                           Grid.Column="0"/>
+                    <Label x:Name="humidityLabel"
+                           HorizontalOptions="Center"
+                           TextColor="White"
+                           FontSize="Subtitle"
+                           Text="69%"
+                           Grid.Row="1"
+                           Grid.Column="0"/>
+                    <Frame BackgroundColor="White"
+                           Grid.Column="1"
+                           Grid.Row="0"
+                           Grid.RowSpan="2"/>
+                    <Label HorizontalOptions="Center"
+                           TextColor="White"
+                           FontSize="Title"
+                           Text="UV styrke"
+                           Grid.Row="0"
+                           Grid.Column="2"/>
+                    <Label x:Name="uvLabel"
+                           HorizontalOptions="Center"
+                           TextColor="White"
+                           FontSize="Subtitle"
+                           Text="Ekstrem"
+                           Grid.Row="1"
+                           Grid.Column="2"/>
+                </Grid>
+            </Frame>
+            <Button BackgroundColor="Transparent"
+                    Text="Se det daglige horoskop"
+                    TextColor="#8D86C9"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="ToHoroscope"
+                    />
+            <Button BackgroundColor="Transparent"
+                    Text="Refresh list"
+                    TextColor="#8D86C9"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="SetItemSource"
+                    />
+            <Frame BackgroundColor="#F61067"
+                   Margin="20"
+                   CornerRadius="15"
+                   VerticalOptions="StartAndExpand"
+                   HeightRequest="110">
+                <CollectionView x:Name="carouselView"
+                                VerticalOptions="StartAndExpand">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal"
+                                           ItemSpacing="35"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid VerticalOptions="StartAndExpand"
+                                  HorizontalOptions="FillAndExpand">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="overviewTimeLabel"
+                                       Text="{Binding Time}"
+                                       HorizontalOptions="Center"
+                                       TextColor="White"
+                                       FontSize="16"
+                                       Grid.Row="0"
+                                       Grid.ColumnSpan="2"/>
+                                
+                                <Image Source="hot.png"
+                                       HorizontalOptions="Center"
+                                       WidthRequest="20"
+                                       HeightRequest="20"
+                                       Grid.Column="0"
+                                       Grid.Row="1"/>
+                                <Label x:Name="overviewTempLabel"
+                                       Text="{Binding Temp}"
+                                       HorizontalOptions="Center"
+                                       TextColor="White"
+                                       Grid.Column="1"
+                                       Grid.Row="1"/>
+                                
+                                <Image Source="humidity.png"
+                                       HorizontalOptions="Center"
+                                       WidthRequest="20"
+                                       HeightRequest="20"
+                                       Grid.Column="0"
+                                       Grid.Row="2"/>
+                                <Label x:Name="overviewHumidityLabel"
+                                       Text="{Binding Humidity}"
+                                       HorizontalOptions="Center"
+                                       TextColor="White"
+                                       Grid.Column="1"
+                                       Grid.Row="2"/>
+                                
+                                <Image Source="sun.png"
+                                       HorizontalOptions="Center"
+                                       WidthRequest="20"
+                                       HeightRequest="20"
+                                       Grid.Column="0"
+                                       Grid.Row="3"/>
+                                <Label x:Name="overviewUvLabel"
+                                       Text="{Binding Uv}"
+                                       HorizontalOptions="Center"
+                                       TextColor="White"
+                                       FontSize="Small"
+                                       Grid.Column="1"
+                                       Grid.Row="3" />
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Frame>
         </StackLayout>
-    </StackLayout>
+    </ScrollView>
 
 </ContentPage>

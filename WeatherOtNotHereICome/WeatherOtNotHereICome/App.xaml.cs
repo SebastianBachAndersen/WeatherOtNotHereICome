@@ -1,7 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Xamarin.Essentials;
 
 namespace WeatherOtNotHereICome
 {
@@ -10,12 +9,16 @@ namespace WeatherOtNotHereICome
         public App()
         {
             InitializeComponent();
-            MainPage = new MainPage();
+
+            MainPage = new NavigationPage(new MainPage()) 
+            {
+                BarBackgroundColor = Color.FromHex("#F61067"),
+                BarTextColor = Color.White
+            };
         }
 
-        protected async override void OnStart()
+        protected override void OnStart()
         {
-            
         }
 
         protected override void OnSleep()

@@ -19,9 +19,39 @@ namespace WeatherOtNotHereICome
         public MainPage()
         {
             InitializeComponent();
-
             GetWeatherData();
-            
+            SetItemSource(null, null);
+        }
+        public void SetItemSource(object sender, EventArgs e)
+        {
+            List<DummyClass> yeet = new List<DummyClass>();
+            for (int i = 0; i < 10; i++)
+            {
+                yeet.Add(new DummyClass("13:37", "1°", "0%", "Ekstrem"));
+            }
+            carouselView.ItemsSource = yeet;
+        }
+
+        private void ToHoroscope(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new HoroscopeList());
+        }
+    }
+
+    public class DummyClass
+    {
+        public string Time { get; set; }
+        public string Temp { get; set; }
+        public string Humidity { get; set; }
+        public string Uv { get; set; }
+
+
+        public DummyClass(string time, string temp, string humidity, string uv)
+        {
+            Time = time;
+            Temp = temp;
+            Humidity = humidity;
+            Uv = uv;
         }
         protected override void OnAppearing()
         {
