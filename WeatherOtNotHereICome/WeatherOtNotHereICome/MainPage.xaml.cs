@@ -27,6 +27,11 @@ namespace WeatherOtNotHereICome
             }
             carouselView.ItemsSource = yeet;
         }
+
+        private void ToHoroscope(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new HoroscopeList());
+        }
     }
 
     public class DummyClass

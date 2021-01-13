@@ -5943,6 +5943,42 @@ namespace WeatherOtNotHereICome.Droid
 			// aapt resource value: 0x7F0700A5
 			public const int wind_vane_harbour = 2131165349;
 			
+			// aapt resource value: 0x7F0700A8
+			public const int zodiac_aquarius = 2131165352;
+			
+			// aapt resource value: 0x7F0700A9
+			public const int zodiac_aries = 2131165353;
+			
+			// aapt resource value: 0x7F0700AA
+			public const int zodiac_cancer = 2131165354;
+			
+			// aapt resource value: 0x7F0700AB
+			public const int zodiac_capricornus = 2131165355;
+			
+			// aapt resource value: 0x7F0700AC
+			public const int zodiac_gemini = 2131165356;
+			
+			// aapt resource value: 0x7F0700AD
+			public const int zodiac_leo = 2131165357;
+			
+			// aapt resource value: 0x7F0700AE
+			public const int zodiac_libra = 2131165358;
+			
+			// aapt resource value: 0x7F0700AF
+			public const int zodiac_pisces = 2131165359;
+			
+			// aapt resource value: 0x7F0700B0
+			public const int zodiac_sagittarius = 2131165360;
+			
+			// aapt resource value: 0x7F0700B1
+			public const int zodiac_scorpius = 2131165361;
+			
+			// aapt resource value: 0x7F0700B2
+			public const int zodiac_taurus = 2131165362;
+			
+			// aapt resource value: 0x7F0700B3
+			public const int zodiac_virgo = 2131165363;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

@@ -89,6 +89,12 @@
                     Text="Se det daglige horoskop"
                     TextColor="#8D86C9"
                     HorizontalOptions="CenterAndExpand"
+                    Clicked="ToHoroscope"
+                    />
+            <Button BackgroundColor="Transparent"
+                    Text="Refresh list"
+                    TextColor="#8D86C9"
+                    HorizontalOptions="CenterAndExpand"
                     Clicked="SetItemSource"
                     />
             <Frame BackgroundColor="#F61067"
