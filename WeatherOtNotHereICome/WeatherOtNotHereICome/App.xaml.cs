@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
 
 namespace WeatherOtNotHereICome
 {
@@ -9,12 +10,12 @@ namespace WeatherOtNotHereICome
         public App()
         {
             InitializeComponent();
-
             MainPage = new MainPage();
         }
 
-        protected override void OnStart()
+        protected async override void OnStart()
         {
+            
         }
 
         protected override void OnSleep()
