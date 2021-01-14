@@ -11,15 +11,47 @@ namespace WeatherOtNotHereICome
 {
     public class WebRequest
     {
-        static HttpClient client = new HttpClient();
+        //static HttpClient client = new HttpClient();
 
-        public static async Task<Root> GetWeather(string url)
+        public static async Task<T> GetData<T>(string url) where T : class
         {
-            string response = await client.GetStringAsync(url);
+            T res = null;
+            using(HttpClient client = new HttpClient())
+            {
+                HttpResponseMessage response = await client.GetAsync(url);
+                if (response.IsSuccessStatusCode)
+                {
+                    try
+                    {
+                        string content = await response.Content.ReadAsStringAsync();
+                        res = JsonConvert.DeserializeObject<T>(content);
+                    }
+                    catch (Exception e)
+                    {
 
-            return JsonConvert.DeserializeObject<Root>(response);
+                        throw;
+                    }
+                }
+                return res;
+
+            }
         }
-        
+
+        public static async Task<T> PostData<T>(string url, HttpContent data = null) where T : class
+        {
+            T res = null;
+            using (HttpClient client = new HttpClient())
+            {
+                HttpResponseMessage response = await client.PostAsync(url, data);
+                if (response.IsSuccessStatusCode)
+                {
+                    string content = await response.Content.ReadAsStringAsync();
+                    return JsonConvert.DeserializeObject<T>(content);
+                }
+                return res;
+            }
+        }
+
 
     }
 }

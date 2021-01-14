@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherOtNotHereICome.HoroscopeDetails"
+             BackgroundColor="#242038">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid x:Name="stackLayout">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="106" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Label Text="Humør"
+                       Grid.Column="0"
+                       Grid.Row="0"
+                       TextColor="#F61067"
+                       FontSize="Medium"
+                       Padding="15,15,0,0"/>
+                <Label Text="{Binding Mood}"
+                       FontSize="Medium"
+                       TextColor="#8D86C9"
+                       Grid.Column="1"
+                       Grid.Row="0"
+                       Padding="0,15,0,0"/>
+
+                <Label Text="Farve"
+                       Grid.Column="0"
+                       Grid.Row="1"
+                       TextColor="#F61067"
+                       FontSize="Medium"
+                       Padding="15,0,0,0"/>
+                <Label Text="{Binding Color}"
+                       FontSize="Medium"
+                       TextColor="#8D86C9"
+                       Grid.Column="1"
+                       Grid.Row="1"/>
+
+                <Label Text="Løkke tal"
+                       Grid.Column="0"
+                       Grid.Row="2"
+                       FontSize="Medium"
+                       TextColor="#F61067"
+                       Padding="15,0,0,0"/>
+                <Label Text="{Binding LuckyNumber}"
+                       FontSize="Medium"
+                       TextColor="#8D86C9"
+                       Grid.Column="1"
+                       Grid.Row="2"/>
+            
+                <Label Text="Løkke tidspunkt"
+                       Grid.Column="0"
+                       Grid.Row="3"
+                       FontSize="Medium"
+                       TextColor="#F61067"
+                       Padding="15,0,0,0"/>
+                <Label Text="{Binding LuckyTime}"
+                       FontSize="Medium"
+                       TextColor="#8D86C9"
+                       Grid.Column="1"
+                       Grid.Row="3"/>
+            
+                <Label Text="Beskrivelse"
+                       Grid.Column="0"
+                       Grid.Row="4"
+                       FontSize="Medium"
+                       TextColor="#F61067"
+                       Padding="15,0,0,0"/>
+                <Label Text="{Binding Description}"
+                       FontSize="Medium"
+                       TextColor="#8D86C9"
+                       Grid.Column="1"
+                       Grid.Row="4"/>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

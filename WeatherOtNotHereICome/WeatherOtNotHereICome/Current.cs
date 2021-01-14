@@ -32,7 +32,7 @@ namespace WeatherOtNotHereICome
         public double dew_point { get; set; }
 
         [JsonProperty("uvi")]
-        public int uvi { get; set; }
+        public double uvi { get; set; }
 
         [JsonProperty("clouds")]
         public int clouds { get; set; }

@@ -5,10 +5,12 @@ using System.Text;
 
 namespace WeatherOtNotHereICome
 {
+    //test
     public class Hourly
     {
         [JsonProperty("dt")]
-        public int dt { get; set; }
+        [JsonConverter(typeof(UTCDateTimeConverter))]
+        public DateTime dt { get; set; }
 
         [JsonProperty("temp")]
         public double temp { get; set; }

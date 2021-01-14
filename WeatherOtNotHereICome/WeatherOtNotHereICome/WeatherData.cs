@@ -5,7 +5,7 @@ using System.Text;
 
 namespace WeatherOtNotHereICome
 {
-    public class Root
+    public class WeatherData
     {
         [JsonProperty("lat")]
         public double lat { get; set; }
@@ -24,5 +24,8 @@ namespace WeatherOtNotHereICome
 
         [JsonProperty("hourly")]
         public List<Hourly> hourly { get; set; }
+
+        [JsonProperty("daily")]
+        public List<Daily> daily { get; set; }
     }
 }

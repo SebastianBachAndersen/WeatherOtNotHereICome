@@ -46,7 +46,7 @@ namespace WeatherOtNotHereICome
             ));
             horoscopes.Add(new Horoscope(
                 horoscopeName: "Skorpion",
-                horoscopeImage: "zodiac_scorpius.png"
+                horoscopeImage: "zodiac_scorpio.png"
             ));
             horoscopes.Add(new Horoscope(
                 horoscopeName: "Skytte",
@@ -54,7 +54,7 @@ namespace WeatherOtNotHereICome
             ));
             horoscopes.Add(new Horoscope(
                 horoscopeName: "Stenbuk",
-                horoscopeImage: "zodiac_capricornus.png"
+                horoscopeImage: "zodiac_capricorn.png"
             ));
             horoscopes.Add(new Horoscope(
                 horoscopeName: "Vandmand",
@@ -68,6 +68,12 @@ namespace WeatherOtNotHereICome
 
             InitializeComponent();
             collectionView.ItemsSource = horoscopes;
+        }
+
+        private void ToDetailsPage(object sender, EventArgs e)
+        {
+            Frame frame = sender as Frame;
+            Navigation.PushAsync(new HoroscopeDetails(frame.BindingContext as Horoscope));
         }
     }
 
