@@ -31,7 +31,7 @@
                    Padding="0,0,0,10" />
             <StackLayout>
                 <Image x:Name="bigWeatherImage"
-                       Source="{Binding Path=weather[0].id, Converter={StaticResource converter}, StringFormat='purple_{0}'}"
+                       Source="{Binding Path=weather[0].id, Converter={StaticResource converter}}"
                        WidthRequest="60"
                        HeightRequest="60" />
                 <Label x:Name="bigWeatherLabel"

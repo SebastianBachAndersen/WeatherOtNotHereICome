@@ -5818,166 +5818,91 @@ namespace WeatherOtNotHereICome.Droid
 			public const int notify_panel_notification_icon_bg = 2131165309;
 			
 			// aapt resource value: 0x7F07007E
-			public const int purple_cloud = 2131165310;
+			public const int rain = 2131165310;
 			
 			// aapt resource value: 0x7F07007F
-			public const int purple_cloudy = 2131165311;
+			public const int rainbow = 2131165311;
 			
 			// aapt resource value: 0x7F070080
-			public const int purple_cloudy_day = 2131165312;
+			public const int rainy = 2131165312;
 			
 			// aapt resource value: 0x7F070081
-			public const int purple_cloudy_night = 2131165313;
+			public const int snow = 2131165313;
 			
 			// aapt resource value: 0x7F070082
-			public const int purple_cold = 2131165314;
+			public const int snowy = 2131165314;
 			
 			// aapt resource value: 0x7F070083
-			public const int purple_eclipse = 2131165315;
+			public const int sun = 2131165315;
 			
 			// aapt resource value: 0x7F070084
-			public const int purple_hot = 2131165316;
+			public const int sunrise = 2131165316;
 			
 			// aapt resource value: 0x7F070085
-			public const int purple_humidity = 2131165317;
+			public const int sunset = 2131165317;
 			
 			// aapt resource value: 0x7F070086
-			public const int purple_mist = 2131165318;
+			public const int thunder = 2131165318;
 			
 			// aapt resource value: 0x7F070087
-			public const int purple_night = 2131165319;
+			public const int tooltip_frame_dark = 2131165319;
 			
 			// aapt resource value: 0x7F070088
-			public const int purple_rain = 2131165320;
+			public const int tooltip_frame_light = 2131165320;
 			
 			// aapt resource value: 0x7F070089
-			public const int purple_rainbow = 2131165321;
+			public const int tornado = 2131165321;
 			
 			// aapt resource value: 0x7F07008A
-			public const int purple_rainy = 2131165322;
-			
-			// aapt resource value: 0x7F07008B
-			public const int purple_snow = 2131165323;
-			
-			// aapt resource value: 0x7F07008C
-			public const int purple_snowy = 2131165324;
+			public const int umbrella = 2131165322;
 			
 			// aapt resource value: 0x7F07008D
-			public const int purple_sun = 2131165325;
+			public const int windy = 2131165325;
 			
 			// aapt resource value: 0x7F07008E
-			public const int purple_sunrise = 2131165326;
+			public const int windy_cloud = 2131165326;
+			
+			// aapt resource value: 0x7F07008B
+			public const int wind_vane = 2131165323;
+			
+			// aapt resource value: 0x7F07008C
+			public const int wind_vane_harbour = 2131165324;
 			
 			// aapt resource value: 0x7F07008F
-			public const int purple_sunset = 2131165327;
+			public const int zodiac_aquarius = 2131165327;
 			
 			// aapt resource value: 0x7F070090
-			public const int purple_thunder = 2131165328;
+			public const int zodiac_aries = 2131165328;
 			
 			// aapt resource value: 0x7F070091
-			public const int purple_tornado = 2131165329;
+			public const int zodiac_cancer = 2131165329;
 			
 			// aapt resource value: 0x7F070092
-			public const int purple_umbrella = 2131165330;
-			
-			// aapt resource value: 0x7F070095
-			public const int purple_windy = 2131165333;
-			
-			// aapt resource value: 0x7F070096
-			public const int purple_windy_cloud = 2131165334;
+			public const int zodiac_capricorn = 2131165330;
 			
 			// aapt resource value: 0x7F070093
-			public const int purple_wind_vane = 2131165331;
+			public const int zodiac_gemini = 2131165331;
 			
 			// aapt resource value: 0x7F070094
-			public const int purple_wind_vane_harbour = 2131165332;
+			public const int zodiac_leo = 2131165332;
+			
+			// aapt resource value: 0x7F070095
+			public const int zodiac_libra = 2131165333;
+			
+			// aapt resource value: 0x7F070096
+			public const int zodiac_pisces = 2131165334;
 			
 			// aapt resource value: 0x7F070097
-			public const int rain = 2131165335;
+			public const int zodiac_sagittarius = 2131165335;
 			
 			// aapt resource value: 0x7F070098
-			public const int rainbow = 2131165336;
+			public const int zodiac_scorpio = 2131165336;
 			
 			// aapt resource value: 0x7F070099
-			public const int rainy = 2131165337;
+			public const int zodiac_taurus = 2131165337;
 			
 			// aapt resource value: 0x7F07009A
-			public const int snow = 2131165338;
-			
-			// aapt resource value: 0x7F07009B
-			public const int snowy = 2131165339;
-			
-			// aapt resource value: 0x7F07009C
-			public const int sun = 2131165340;
-			
-			// aapt resource value: 0x7F07009D
-			public const int sunrise = 2131165341;
-			
-			// aapt resource value: 0x7F07009E
-			public const int sunset = 2131165342;
-			
-			// aapt resource value: 0x7F07009F
-			public const int thunder = 2131165343;
-			
-			// aapt resource value: 0x7F0700A0
-			public const int tooltip_frame_dark = 2131165344;
-			
-			// aapt resource value: 0x7F0700A1
-			public const int tooltip_frame_light = 2131165345;
-			
-			// aapt resource value: 0x7F0700A2
-			public const int tornado = 2131165346;
-			
-			// aapt resource value: 0x7F0700A3
-			public const int umbrella = 2131165347;
-			
-			// aapt resource value: 0x7F0700A6
-			public const int windy = 2131165350;
-			
-			// aapt resource value: 0x7F0700A7
-			public const int windy_cloud = 2131165351;
-			
-			// aapt resource value: 0x7F0700A4
-			public const int wind_vane = 2131165348;
-			
-			// aapt resource value: 0x7F0700A5
-			public const int wind_vane_harbour = 2131165349;
-			
-			// aapt resource value: 0x7F0700A8
-			public const int zodiac_aquarius = 2131165352;
-			
-			// aapt resource value: 0x7F0700A9
-			public const int zodiac_aries = 2131165353;
-			
-			// aapt resource value: 0x7F0700AA
-			public const int zodiac_cancer = 2131165354;
-			
-			// aapt resource value: 0x7F0700AB
-			public const int zodiac_capricorn = 2131165355;
-			
-			// aapt resource value: 0x7F0700AC
-			public const int zodiac_gemini = 2131165356;
-			
-			// aapt resource value: 0x7F0700AD
-			public const int zodiac_leo = 2131165357;
-			
-			// aapt resource value: 0x7F0700AE
-			public const int zodiac_libra = 2131165358;
-			
-			// aapt resource value: 0x7F0700AF
-			public const int zodiac_pisces = 2131165359;
-			
-			// aapt resource value: 0x7F0700B0
-			public const int zodiac_sagittarius = 2131165360;
-			
-			// aapt resource value: 0x7F0700B1
-			public const int zodiac_scorpio = 2131165361;
-			
-			// aapt resource value: 0x7F0700B2
-			public const int zodiac_taurus = 2131165362;
-			
-			// aapt resource value: 0x7F0700B3
-			public const int zodiac_virgo = 2131165363;
+			public const int zodiac_virgo = 2131165338;
 			
 			static Drawable()
 			{
