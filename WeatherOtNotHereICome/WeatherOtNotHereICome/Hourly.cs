@@ -5,7 +5,6 @@ using System.Text;
 
 namespace WeatherOtNotHereICome
 {
-    //test
     public class Hourly
     {
         [JsonProperty("dt")]
