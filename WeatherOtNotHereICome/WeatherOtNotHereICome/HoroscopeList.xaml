@@ -20,7 +20,11 @@
                                    CornerRadius="5"
                                    BackgroundColor="#F61067"
                                    VerticalOptions="StartAndExpand"
-                                   Margin="0">
+                                   Margin="0"
+                                   >
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ToDetailsPage"/>
+                                </Frame.GestureRecognizers>
                                 <StackLayout>
                                     <Image Source="{Binding HoroscopeImage}"
                                            HeightRequest="50"

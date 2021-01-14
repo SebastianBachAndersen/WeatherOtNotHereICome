@@ -242,7 +242,7 @@
     <AndroidResource Include="Resources\drawable\purple_cloudy_day.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\zodiac_capricornus.png" />
+    <AndroidResource Include="Resources\drawable\zodiac_capricorn.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\zodiac_gemini.png" />
@@ -260,7 +260,7 @@
     <AndroidResource Include="Resources\drawable\zodiac_sagittarius.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\zodiac_scorpius.png" />
+    <AndroidResource Include="Resources\drawable\zodiac_scorpio.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\zodiac_taurus.png" />
@@ -280,7 +280,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties TriggeredFromHotReload="False" />
+      <UserProperties TriggeredFromHotReload="False" XamarinHotReloadDebuggerTimeoutExceptionWeatherOtNotHereIComeAndroidHideInfoBar="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

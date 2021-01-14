@@ -28,36 +28,31 @@ namespace WeatherOtNotHereICome
         }
         public void SetItemSource(object sender, EventArgs e)
         {
-            List<DummyClass> yeet = new List<DummyClass>();
-            for (int i = 0; i < 10; i++)
-            {
-                yeet.Add(new DummyClass("13:37", "1°", "0%", "Ekstrem"));
-            }
-            carouselView.ItemsSource = yeet;
+            GetWeatherData();
         }
 
         private void ToHoroscope(object sender, EventArgs e)
         {
             Navigation.PushAsync(new HoroscopeList());
         }
-        public async Task<Root> GetWeatherData()
+        public async Task<WeatherData> GetWeatherData()
         {
             var location = await Geolocation.GetLastKnownLocationAsync();
-            Root data = await WebRequest.GetWeather("https://api.openweathermap.org/data/2.5/onecall?lat=" + location.Latitude.ToString() + "&lon=" + location.Longitude.ToString() + "&exclude=alerts,minutely,daily&appid=29c7a53dbed814effac1da056c8993eb&units=metric&lang=da");
+            string url = "https://api.openweathermap.org/data/2.5/onecall?lat=" +  $"{location.Latitude}&lon={location.Longitude}&exclude=alerts,minutely&appid=29c7a53dbed814effac1da056c8993eb&units=metric&lang=da";
+            WeatherData data = await WebRequest.GetData<WeatherData>(url);
             try
             {
-
-
                 if (location != null)
                 {
-                    locationLabel.Text = data.timezone;
-                    bigWeatherLabel.Text = data.current.temp.ToString();
-                    humidityLabel.Text = data.current.humidity.ToString() + "%";
+                    var placemark = (await Geocoding.GetPlacemarksAsync(data.lat, data.lon)).FirstOrDefault();
+                    locationLabel.Text = String.Format("{0}, {1}", placemark.Locality, placemark.CountryName);
+                    bigWeatherImage.BindingContext = data.current;
+                    bigWeatherLabel.Text = $"{Math.Round(data.current.temp)}°";
+                    humidityLabel.Text = $"{data.current.humidity}%";
                     uvLabel.Text = data.current.uvi.ToString();
-
-                    List<Hourly> temp = new List<Hourly>();
-                    //temp.Add(data.hourly);
-                    //carouselView.ItemsSource = temp;
+                    data.hourly.RemoveAt(0);
+                    collectionViewHours.ItemsSource = data.hourly.Where((x) => x.dt <= DateTime.Now.Date.AddDays(1));
+                    collectionViewDays.ItemsSource = data.daily;
                     return data;
                 }
             }
@@ -82,9 +77,6 @@ namespace WeatherOtNotHereICome
                 Humidity = humidity;
                 Uv = uv;
             }
-            
-
-
         }
     }
 }
