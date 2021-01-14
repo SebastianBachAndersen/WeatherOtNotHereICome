@@ -20,7 +20,11 @@ namespace WeatherOtNotHereICome
         {
             InitializeComponent();
             GetWeatherData();
-            SetItemSource(null, null);
+            //SetItemSource(null, null);
+        }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
         }
         public void SetItemSource(object sender, EventArgs e)
         {
@@ -36,40 +40,24 @@ namespace WeatherOtNotHereICome
         {
             Navigation.PushAsync(new HoroscopeList());
         }
-    }
-
-    public class DummyClass
-    {
-        public string Time { get; set; }
-        public string Temp { get; set; }
-        public string Humidity { get; set; }
-        public string Uv { get; set; }
-
-
-        public DummyClass(string time, string temp, string humidity, string uv)
-        {
-            Time = time;
-            Temp = temp;
-            Humidity = humidity;
-            Uv = uv;
-        }
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-        }
         public async Task<Root> GetWeatherData()
         {
             var location = await Geolocation.GetLastKnownLocationAsync();
             Root data = await WebRequest.GetWeather("https://api.openweathermap.org/data/2.5/onecall?lat=" + location.Latitude.ToString() + "&lon=" + location.Longitude.ToString() + "&exclude=alerts,minutely,daily&appid=29c7a53dbed814effac1da056c8993eb&units=metric&lang=da");
             try
             {
-                
+
 
                 if (location != null)
                 {
-                    
-                    lblLatitude.Text = "Latitude: " + data.lat;
-                    lblLongitude.Text = "Longtitude: " + data.lon;
+                    locationLabel.Text = data.timezone;
+                    bigWeatherLabel.Text = data.current.temp.ToString();
+                    humidityLabel.Text = data.current.humidity.ToString() + "%";
+                    uvLabel.Text = data.current.uvi.ToString();
+
+                    List<Hourly> temp = new List<Hourly>();
+                    //temp.Add(data.hourly);
+                    //carouselView.ItemsSource = temp;
                     return data;
                 }
             }
@@ -79,6 +67,24 @@ namespace WeatherOtNotHereICome
             }
             return data;
         }
-        
+        public class DummyClass
+        {
+            public string Time { get; set; }
+            public string Temp { get; set; }
+            public string Humidity { get; set; }
+            public string Uv { get; set; }
+
+
+            public DummyClass(string time, string temp, string humidity, string uv)
+            {
+                Time = time;
+                Temp = temp;
+                Humidity = humidity;
+                Uv = uv;
+            }
+            
+
+
+        }
     }
 }

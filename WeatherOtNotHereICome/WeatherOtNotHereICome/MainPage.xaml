@@ -123,7 +123,7 @@
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
                                 <Label x:Name="overviewTimeLabel"
-                                       Text="{Binding Time}"
+                                       Text="{Binding dt}"
                                        HorizontalOptions="Center"
                                        TextColor="White"
                                        FontSize="16"
@@ -137,7 +137,7 @@
                                        Grid.Column="0"
                                        Grid.Row="1"/>
                                 <Label x:Name="overviewTempLabel"
-                                       Text="{Binding Temp}"
+                                       Text="{Binding temp}"
                                        HorizontalOptions="Center"
                                        TextColor="White"
                                        Grid.Column="1"
@@ -150,7 +150,7 @@
                                        Grid.Column="0"
                                        Grid.Row="2"/>
                                 <Label x:Name="overviewHumidityLabel"
-                                       Text="{Binding Humidity}"
+                                       Text="{Binding humidity}"
                                        HorizontalOptions="Center"
                                        TextColor="White"
                                        Grid.Column="1"
@@ -163,7 +163,7 @@
                                        Grid.Column="0"
                                        Grid.Row="3"/>
                                 <Label x:Name="overviewUvLabel"
-                                       Text="{Binding Uv}"
+                                       Text="{Binding uvi}"
                                        HorizontalOptions="Center"
                                        TextColor="White"
                                        FontSize="Small"
