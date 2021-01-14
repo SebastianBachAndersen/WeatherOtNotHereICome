@@ -117,7 +117,8 @@
                    Margin="20"
                    CornerRadius="15"
                    VerticalOptions="StartAndExpand"
-                   HeightRequest="110">
+                   HeightRequest="110"
+                   Grid.ColumnSpan="{OnIdiom Tablet=1, Phone=2}">
                 <CollectionView x:Name="collectionViewHours"
                                 VerticalOptions="StartAndExpand">
                     <CollectionView.ItemsLayout>
@@ -197,7 +198,9 @@
                    VerticalOptions="StartAndExpand"
                    HeightRequest="110"
                    Grid.Row="{OnIdiom Tablet=0, Phone=1}"
-                   Grid.Column="{OnIdiom Tablet=1, Phone=0}">
+                   Grid.Column="{OnIdiom Tablet=1, Phone=0}"
+                   Grid.ColumnSpan="{OnIdiom Tablet=1, Phone=2}">
+                  
                 <CollectionView x:Name="collectionViewDays"
                                 VerticalOptions="StartAndExpand">
                     <CollectionView.ItemsLayout>
