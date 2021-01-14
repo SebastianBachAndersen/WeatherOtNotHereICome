@@ -103,7 +103,17 @@
                     HorizontalOptions="CenterAndExpand"
                     Clicked="SetItemSource"
                     />
-            <Frame BackgroundColor="#F61067"
+            
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Frame BackgroundColor="#F61067"
                    Margin="20"
                    CornerRadius="15"
                    VerticalOptions="StartAndExpand"
@@ -185,7 +195,9 @@
                    Margin="20"
                    CornerRadius="15"
                    VerticalOptions="StartAndExpand"
-                   HeightRequest="110">
+                   HeightRequest="110"
+                   Grid.Row="{OnIdiom Tablet=0, Phone=1}"
+                   Grid.Column="{OnIdiom Tablet=1, Phone=0}">
                 <CollectionView x:Name="collectionViewDays"
                                 VerticalOptions="StartAndExpand">
                     <CollectionView.ItemsLayout>
@@ -258,6 +270,7 @@
                     </CollectionView.ItemTemplate>
                 </CollectionView>
             </Frame>
+            </Grid>
         </StackLayout>
     </ScrollView>
 
