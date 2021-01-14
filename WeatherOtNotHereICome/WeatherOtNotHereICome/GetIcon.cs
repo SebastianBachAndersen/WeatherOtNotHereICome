@@ -22,11 +22,14 @@ namespace WeatherOtNotHereICome
                     case int n when (300 <= n && n <= 321):
                         output = "rain.png";
                         break;
-                    case int n when (500 <= n && n <= 531):
+                    case int n when ((500 <= n && n <= 504) || (520 <= n && n <= 531)):
                         output = "rainy.png";
                         break;
-                    case int n when (600 <= n && n <= 622):
+                    case int n when (n == 511):
                         output = "snow.png";
+                        break;
+                    case int n when (600 <= n && n <= 622):
+                        output = "snowy.png";
                         break;
                     case int n when (701 <= n && n <= 771):
                         output = "mist.png";
