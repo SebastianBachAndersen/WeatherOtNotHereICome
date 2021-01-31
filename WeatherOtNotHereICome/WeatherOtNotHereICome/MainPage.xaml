@@ -20,14 +20,14 @@
                    HorizontalOptions="Center"
                    TextColor="#8D86C9"
                    FontSize="Medium"
-                   Text="Indlæser..."
+                   Text="Loading..."
                    Padding="0,15,0,0" 
                    Margin="0,0,0,-5" />
             <Label x:Name="timeLabel"
                    HorizontalOptions="Center"
                    TextColor="#8D86C9"
                    FontSize="Small"
-                   Text="Nu"
+                   Text="Now"
                    Padding="0,0,0,10" />
             <StackLayout>
                 <Image x:Name="bigWeatherImage"
@@ -62,7 +62,7 @@
                     <Label HorizontalOptions="Center"
                            TextColor="White"
                            FontSize="Title"
-                           Text="Luftfugtighed"
+                           Text="Humidity"
                            Grid.Row="0"
                            Grid.Column="0"/>
                     <Label x:Name="humidityLabel"
@@ -79,7 +79,7 @@
                     <Label HorizontalOptions="Center"
                            TextColor="White"
                            FontSize="Title"
-                           Text="UV styrke"
+                           Text="UV index"
                            Grid.Row="0"
                            Grid.Column="2"/>
                     <Label x:Name="uvLabel"
@@ -92,18 +92,11 @@
                 </Grid>
             </Frame>
             <Button BackgroundColor="Transparent"
-                    Text="Se det daglige horoskop"
+                    Text="Daily horoscope"
                     TextColor="#8D86C9"
                     HorizontalOptions="CenterAndExpand"
                     Clicked="ToHoroscope"
                     />
-            <Button BackgroundColor="Transparent"
-                    Text="Refresh list"
-                    TextColor="#8D86C9"
-                    HorizontalOptions="CenterAndExpand"
-                    Clicked="SetItemSource"
-                    />
-            
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>

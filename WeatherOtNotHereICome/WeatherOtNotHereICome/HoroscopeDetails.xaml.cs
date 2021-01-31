@@ -64,6 +64,7 @@ namespace WeatherOtNotHereICome
             public string LuckyNumber { get; set; }
 
             [JsonProperty("lucky_time")]
+            [JsonConverter(typeof(StandardTimeFormatConverter))]
             public string LuckyTime { get; set; }
         }
 

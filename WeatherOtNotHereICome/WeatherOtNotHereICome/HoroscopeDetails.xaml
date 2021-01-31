@@ -18,7 +18,7 @@
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
-                <Label Text="Humør"
+                <Label Text="Mood"
                        Grid.Column="0"
                        Grid.Row="0"
                        TextColor="#F61067"
@@ -31,7 +31,7 @@
                        Grid.Row="0"
                        Padding="0,15,0,0"/>
 
-                <Label Text="Farve"
+                <Label Text="Colour"
                        Grid.Column="0"
                        Grid.Row="1"
                        TextColor="#F61067"
@@ -43,7 +43,7 @@
                        Grid.Column="1"
                        Grid.Row="1"/>
 
-                <Label Text="Løkke tal"
+                <Label Text="Lucky number"
                        Grid.Column="0"
                        Grid.Row="2"
                        FontSize="Medium"
@@ -55,7 +55,7 @@
                        Grid.Column="1"
                        Grid.Row="2"/>
             
-                <Label Text="Løkke tidspunkt"
+                <Label Text="Lucky time"
                        Grid.Column="0"
                        Grid.Row="3"
                        FontSize="Medium"
@@ -67,7 +67,7 @@
                        Grid.Column="1"
                        Grid.Row="3"/>
             
-                <Label Text="Beskrivelse"
+                <Label Text="Description"
                        Grid.Column="0"
                        Grid.Row="4"
                        FontSize="Medium"

@@ -17,51 +17,51 @@ namespace WeatherOtNotHereICome
             List<Horoscope> horoscopes = new List<Horoscope>();
 
             horoscopes.Add(new Horoscope(
-                horoscopeName: "Vædder",
+                horoscopeName: "Aries",
                 horoscopeImage: "zodiac_aries.png"
             ));
             horoscopes.Add(new Horoscope(
-                horoscopeName: "Tyr",
+                horoscopeName: "Taurus",
                 horoscopeImage: "zodiac_taurus.png"
             ));
             horoscopes.Add(new Horoscope(
-                horoscopeName: "Tvilling",
+                horoscopeName: "Gemini",
                 horoscopeImage: "zodiac_gemini.png"
             ));
             horoscopes.Add(new Horoscope(
-                horoscopeName: "Krebs",
+                horoscopeName: "Cancer",
                 horoscopeImage: "zodiac_cancer.png"
             ));
             horoscopes.Add(new Horoscope(
-                horoscopeName: "Løve",
+                horoscopeName: "Leo",
                 horoscopeImage: "zodiac_leo.png"
             ));
             horoscopes.Add(new Horoscope(
-                horoscopeName: "Jomfru",
+                horoscopeName: "Virgo",
                 horoscopeImage: "zodiac_virgo.png"
             ));
             horoscopes.Add(new Horoscope(
-                horoscopeName: "Vægt",
+                horoscopeName: "Libra",
                 horoscopeImage: "zodiac_libra.png"
             ));
             horoscopes.Add(new Horoscope(
-                horoscopeName: "Skorpion",
+                horoscopeName: "Scorpio",
                 horoscopeImage: "zodiac_scorpio.png"
             ));
             horoscopes.Add(new Horoscope(
-                horoscopeName: "Skytte",
+                horoscopeName: "Sagittarius",
                 horoscopeImage: "zodiac_sagittarius.png"
             ));
             horoscopes.Add(new Horoscope(
-                horoscopeName: "Stenbuk",
+                horoscopeName: "Capricorn",
                 horoscopeImage: "zodiac_capricorn.png"
             ));
             horoscopes.Add(new Horoscope(
-                horoscopeName: "Vandmand",
+                horoscopeName: "Aquarius",
                 horoscopeImage: "zodiac_aquarius.png"
             ));
             horoscopes.Add(new Horoscope(
-                horoscopeName: "Fisk",
+                horoscopeName: "Pisces",
                 horoscopeImage: "zodiac_pisces.png"
             ));
 
