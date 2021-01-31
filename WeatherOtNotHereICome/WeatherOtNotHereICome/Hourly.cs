@@ -45,6 +45,6 @@ namespace WeatherOtNotHereICome
         public List<Weather> weather { get; set; }
 
         [JsonProperty("pop")]
-        public int pop { get; set; }
+        public double pop { get; set; }
     }
 }
